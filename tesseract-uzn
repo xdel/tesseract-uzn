@@ -46,7 +46,7 @@ for image_file in "${@:2}" ; do
 
   echo "Saving output to ${bold}$txt_target.txt${normal}"
 
-  if ! tesseract "$image_tmp" "$txt_target" -psm 4
+  if ! tesseract "$image_tmp" "$txt_target" --psm 4
   then
     echo "Can't find the tesseract executable, make sure it's in your PATH" 1>&2
     exit 1
